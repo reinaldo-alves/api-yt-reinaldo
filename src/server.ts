@@ -8,6 +8,11 @@ const app = express();
 const port = process.env.PORT || 3000
 
 app.use(express.json());
+
+app.get("/", function (req, res) {
+    res.send("Seja bem vindo à API do Youtube by Reinaldo Alves");
+});
+
 app.use('/user', userRoutes);
 app.use('/videos', videosRoutes);
 
