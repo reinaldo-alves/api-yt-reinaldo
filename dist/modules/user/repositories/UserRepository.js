@@ -39,7 +39,7 @@ class UserRepository {
                         const token = (0, jsonwebtoken_1.sign)({
                             id: results[0].user_id,
                             email: results[0].email
-                        }, process.env.SECRET, { expiresIn: "1d" });
+                        }, "segredo", { expiresIn: "1d" });
                         return response.status(200).json({ token: token, message: "Autenticado com sucesso" });
                     }
                     else {
