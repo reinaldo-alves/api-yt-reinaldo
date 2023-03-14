@@ -11,6 +11,9 @@ const dotenv_1 = require("dotenv");
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
+app.get("/", function (req, res) {
+    res.send("Seja bem vindo à API do Youtube by Reinaldo Alves");
+});
 app.use('/user', user_routes_1.userRoutes);
 app.use('/videos', videos_routes_1.videosRoutes);
 app.listen(port);
